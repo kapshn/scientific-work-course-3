@@ -21,3 +21,4 @@ app.post('/', function (req, res) {
 app.listen(8000)
 // curl --data "state=0&time=1000&brightness=15" localhost:8000
 // curl --data "state=1&time=1000&brightness=15" localhost:8000
+// ./ngrok http 8000
