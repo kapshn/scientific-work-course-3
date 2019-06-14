@@ -16,6 +16,7 @@ app.use(express.json());
 // POST method route
 app.post('/', function (req, res) {
   light.change_state(parseInt(req.body.state, 10), parseInt(req.body.time, 10), parseInt(req.body.brightness, 10));
+  console.log(req.headers.state);
   res.send();
 });
 app.listen(8000)
