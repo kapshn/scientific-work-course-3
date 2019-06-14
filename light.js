@@ -1,5 +1,8 @@
 const TPLSmartDevice = require('tplink-lightbulb');
-const light = new TPLSmartDevice('192.168.1.56');
+var fs = require('fs');
+
+var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+const light = new TPLSmartDevice(config.ip);
 
 module.exports.change_state = function(state, time, brightness) {
   //console.log(state, time, brightness);
