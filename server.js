@@ -47,7 +47,10 @@ app.post('/', function (req, res) {
     })
     .catch(e => console.error(e))
   }
-
+  if (req.body.queryResult.intent.displayName == "intent set brightness") {
+    //console.log(req.body.queryResult.parameters.number);
+    light.change_state(1, 1500, parseInt(req.body.queryResult.parameters.number,10));
+  }
   res.status(200).json(data);
 });
 app.listen(8000)
