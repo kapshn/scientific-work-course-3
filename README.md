@@ -17,7 +17,7 @@
 **done!**
 
 ## Guide
-#Main change state method
+# Main change state method
 ```javascript
 module.exports.change_state = function(state, time, brightness) {
   console.log(state, time, brightness);
@@ -39,7 +39,7 @@ module.exports.change_state = function(state, time, brightness) {
 Here method to change state by API, take 3 parameters: state (0/1), time (how much time should be a transition) and brightness (0-100)
 
 In `server.js` in method ```javascript app.post()``` big switch case, wich takes parameters from post-request body for find solution, after finding use ```javascript change_state(s, t, b)``` or **something else**
-#something else
+# something else
 Another 2 types of methods or changing `preset.json`, wich keep your preset settings, or
 1. find current brightness by ```javascript .infoBrightness()```
 2. changing brightness for 10% up or down from current
